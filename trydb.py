@@ -16,7 +16,7 @@ grocery=Grocery('trydb')
 #'v'代表漏洞，'h'代表病毒木马，'f'代表国外资讯，'c'代表国内资讯，'g'代表国内政策，'m'代表会议，s代表技术，‘o'代表其他,
 class GetContent():
     def getContent(self):	    
-        db = mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')	   
+        db = mysql.connector.connect(user="root",password="###",database="###",charset='utf8')	   
         cursor = db.cursor()
         Content = []  		
         sql = "select content from spiderdb.dictionary"   
@@ -31,7 +31,7 @@ class GetContent():
         finally:
             return Content
     def getContent1(self):	    
-        db = mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')	   
+        db = mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')	   
         cursor = db.cursor()
         Content = []  		
         sql = "select content from spiderdb.security"   
@@ -46,7 +46,7 @@ class GetContent():
             return Content
 
     def getSign(self):	    
-        db = mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')	   
+        db = mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')	   
         cursor = db.cursor()
         Content = []  		
         sql = "select sign from spiderdb.dictionary"   
@@ -61,7 +61,7 @@ class GetContent():
             return Content
 
     def getTitle(self):	    
-        db = mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')	   
+        db = mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')	   
         cursor = db.cursor()
         Content = []  		
         sql = "select title from spiderdb.dictionary"
@@ -75,7 +75,7 @@ class GetContent():
         finally:
             return Content
     def getTitle1(self):	    
-        db = mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')	   
+        db = mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')	   
         cursor = db.cursor()
         Content = []  		
         sql = "select title from spiderdb.security"
@@ -90,7 +90,7 @@ class GetContent():
             return Content
 
     def saveContent(self,i,num):
-        conn=mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')
+        conn=mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')
         cur=conn.cursor()
         sql="update  security SET sign ='%s' where id='%d'"%(num,i)
         print sql         
@@ -100,7 +100,7 @@ class GetContent():
         conn.commit()
         conn.close()
     def deleteNULL(self):
-        conn=mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')
+        conn=mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')
         cur=conn.cursor()
         sql="update  security SET content='' where content='NULL'"
         print sql         
