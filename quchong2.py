@@ -12,7 +12,7 @@ import jieba.analyse
 from optparse import OptionParser
 class GetTitle():
     def getContent(self):
-        db=mysql.connector.connect(user='root',password='lcy492',database='spiderdb',charset='utf8')
+        db=mysql.connector.connect(user='root',password='###',database='spiderdb',charset='utf8')
         cursor=db.cursor()
         Content=[]
         sql='select content from spiderdb.security'               
@@ -26,7 +26,7 @@ class GetTitle():
         finally:
             return Content
     def getTitle(self):
-        db=mysql.connector.connect(user='root',password='lcy492',database='spiderdb',charset='utf8')
+        db=mysql.connector.connect(user='root',password='###',database='spiderdb',charset='utf8')
         cursor=db.cursor()
         Content=[]
         sql='select title from spiderdb.security'            
@@ -40,7 +40,7 @@ class GetTitle():
         finally:
             return Content
     def modifyContent(self,i):
-        conn=mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')
+        conn=mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')
         cur=conn.cursor()
         sql="update spiderdb.security SET title='null'  where id='%d'"%(i)
         print sql                
@@ -48,7 +48,7 @@ class GetTitle():
         conn.commit()  
         conn.close()
     def deleteContent(self):
-        conn=mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')
+        conn=mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')
         cur=conn.cursor()     
         sql="delete from spiderdb.security where title='null'"
         print sql         
@@ -56,7 +56,7 @@ class GetTitle():
         conn.commit()  
         conn.close()
     def saveWeight(self,e,j):
-        conn=mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')
+        conn=mysql.connector.connect(user="root",password="###",database="spiderdb",charset='utf8')
         cur=conn.cursor()
         sql="update spiderdb.security SET weight='%s'  where id='%d'"%(e,j)
         print sql                
