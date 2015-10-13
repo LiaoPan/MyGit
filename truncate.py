@@ -1,7 +1,7 @@
 import mysql.connector
 class Truncate():
     def truncate(self):
-        db=mysql.connector.connect(user='root',password='lcy492',database='spiderdb',charset='utf8')
+        db=mysql.connector.connect(user='root',password='###',database='spiderdb',charset='utf8')
         cursor=db.cursor()
         sql='TRUNCATE spiderdb.security'
         cursor.execute(sql)
