@@ -9,7 +9,7 @@ browser.get('https://mp.weixin.qq.com/')
 #获取数据库中内容
 class GetContent():
     def getContent(self,label):	    
-        db = mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')	   
+        db = mysql.connector.connect(user="root",password="###",database="###",charset='utf8')	   
         cursor = db.cursor()
         Content = []  		
         sql = "select title from spiderdb.security where sign='%s'" %label  
@@ -30,11 +30,11 @@ class GetContent():
 # ###########################登录微信账号###################
 browser.implicitly_wait(2)
 #输入微信账号
-browser.find_element_by_id("account").send_keys("13910845767@139.com")
+browser.find_element_by_id("account").send_keys("###")
   
 browser.implicitly_wait(2)
 #输入密码
-browser.find_element_by_id("pwd").send_keys("nipc318#")
+browser.find_element_by_id("pwd").send_keys("###")
 
 #单击登陆
 browser.find_element_by_id("loginBt").click()
