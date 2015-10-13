@@ -12,7 +12,7 @@ import mysql.connector
 import pdb
 class delete_Not_today():
     def deleteNumber(self,today,pastday):
-        conn=mysql.connector.connect(user="root",password="lcy492",database="spiderdb",charset='utf8')
+        conn=mysql.connector.connect(user="root",password="###",database="####",charset='utf8')
         cur=conn.cursor()
         sql="delete from spiderdb.security where time not in('%s','%s')"%(today,pastday);
         print sql         
